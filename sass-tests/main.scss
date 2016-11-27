@@ -1,3 +1,33 @@
-body{
-  background: red;
+$primary-color: #343;
+$margin: 5px;
+$fun: $margin + 4pt;
+
+@mixin funda($a, $b) {
+    font-size: $a;
+    color: #eee;
+    margin: 5px 0 0 $fun;
+}
+body {
+	background: $primary-color;
+	font-family: Futura, "Trebuchet MS", sans-serif;
+	> h1 {
+	  @include funda(3em,0px);
+	}
+}
+
+.entry {
+	background: white;
+	margin: 5px;
+	padding: 5px;
+	h1 {
+		font-size: 1.2em;
+		margin: 0px;
+	}
+	.date {
+		font-size: 0.3em;
+		color: $primary-color;
+	}
+	a {
+		color: #333;
+	}
 }
